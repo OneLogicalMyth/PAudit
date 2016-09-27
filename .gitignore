@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+Helpers/Get-SQLConnectionString.ps1
+Helpers/Write-SQLQuery.ps1
+Helpers/Invoke-SQLTableCheck.ps1
+Helpers/Get-WorkgroupMachines.ps1
+Helpers/New-SQLTableScript.ps1
+Helpers/Read-SQLQuery.ps1
+Helpers/Stop-LongRunningJobs.ps1
+Packages/002.StandardAudit/Set-WSUS.ps1

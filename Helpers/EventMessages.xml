@@ -1,0 +1,68 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<!--
+    Using curly braces the text will be replaced with the following;
+    DATA    - A string value provided by the call
+    BR      - Is replaced with a new line only for the Windows event log       
+-->
+<Messages>
+    <Message>
+        <EventID>95</EventID>
+        <EntryType>Information</EntryType>
+        <Text>PAudit as set TrustedHosts to * for WinRM this means all remote computers are trusted.</Text>
+    </Message>
+    <Message>
+        <EventID>100</EventID>
+        <EntryType>Information</EntryType>
+        <Text>Helpers have imported PAudit is now starting</Text>
+    </Message>
+    <Message>
+        <EventID>105</EventID>
+        <EntryType>Information</EntryType>
+        <Text>Configuration has loaded successfully and root path is '{{DATA}}'</Text>
+    </Message>
+    <Message>
+        <EventID>110</EventID>
+        <EntryType>Information</EntryType>
+        <Text>Loading package '{{DATA}}'.</Text>
+    </Message>
+    <Message>
+        <EventID>115</EventID>
+        <EntryType>Information</EntryType>
+        <Text>Now running master Package '{{DATA}}'.</Text>
+    </Message>
+    <Message>
+        <EventID>120</EventID>
+        <EntryType>Information</EntryType>
+        <Text>PS Remote session has been created for '{{DATA}}' with success.</Text>
+    </Message>
+    <Message>
+        <EventID>125</EventID>
+        <EntryType>Information</EntryType>
+        <Text>All domain based PS Remote sessions created.</Text>
+    </Message>
+    <Message>
+        <EventID>500</EventID>
+        <EntryType>Error</EntryType>
+        <Text>No packages have been found, PAudit is now exiting.</Text>
+    </Message>
+    <Message>
+        <EventID>1001</EventID>
+        <EntryType>Error</EntryType>
+        <Text>Failed to obtain AD servers, check that ADWS is running on a DC - {{DATA}}</Text>
+    </Message>
+    <Message>
+        <EventID>505</EventID>
+        <EntryType>Error</EntryType>
+        <Text>Failed to establish PS session with: {{DATA}}, is WSMan configured and PowerShell version 2 or greater installed?{{BR}}If yes check that you have powershell remoting enabled.{{BR}}From an administrative PowerShell window run 'Enable-PSRemoting -Force'.{{BR}}Also check that the TCP port 5985 is allowed through firewalls.</Text>
+    </Message>
+    <Message>
+        <EventID>510</EventID>
+        <EntryType>Error</EntryType>
+        <Text>No computers in list to process unable to run any collection packages.</Text>
+    </Message>
+    <Message>
+        <EventID>515</EventID>
+        <EntryType>Error</EntryType>
+        <Text>No PS remote sessions available, this package requires a .</Text>
+    </Message>
+</Messages>

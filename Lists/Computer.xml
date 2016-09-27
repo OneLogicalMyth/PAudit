@@ -1,0 +1,13 @@
+<Computers>
+  <!-- Each object will be connected to using a PSSession using SSL on port 5986 -->
+  <!-- Passwords are encrypted only the user account and the machine it was encrypted on can decrypt this -->
+  <!-- HostName param can be either a DNS hostname (FQDN), shortname (NetBIOS) or IP address -->
+  <!-- Username and Password must be encrypted using the encrypt password tool provided -->
+  <Computer>
+    <HostName>domain.local</HostName>
+    <Username>DOMAIN\Username</Username>
+    <Password>MUST BE ENCRYPTED</Password>
+    <!-- PS Remote session settings, by default SSL is off for PowerShell -->
+    <UseSSL>0</UseSSL>
+  </Computer>
+</Domains>
