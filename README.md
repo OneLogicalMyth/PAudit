@@ -1,6 +1,6 @@
 # Download
 
-![Download](https://img.shields.io/badge/Not%20Yet%20Released-v0.0-red.svg)
+![Download](https://img.shields.io/badge/Not%20Yet%20Released-v0.0-red.svg "Not Yet Released")
 
 # Introduction
 
