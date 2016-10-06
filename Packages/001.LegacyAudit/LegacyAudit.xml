@@ -1,39 +1,28 @@
 <Configuration>
-  <PackageName>LegacyAudit</PackageName>
-  <PackageType>collect</PackageType>
-  <Description>Performs a basic audit of Windows 2000 and up, for newer Windows version PowerShell remoting is used if possible to reduce collection time.</Description>
-  <!-- Command to run to get the list of computers to run -->
-  <!-- The object property to use for creating a PSSession must be FQDN -->
-  <ComputerSource>
-    <!-- discovers current domain the machine running PAudit is on and obtains a list of potential valid computers -->
-    <DiscoverDomain>1</DiscoverDomain>
-    <!-- obtains domain(s) list from '\Lists\Domain.xml' and then obtains a list of potential valid computers from that domain(s) -->
-    <DomainList>1</DomainList>
-    <!-- obtains the computer hostnames or IP addresses from '\Lists\Computer.xml' -->
-    <ComputerList>1</ComputerList>
-  </ComputerSource>
-  <!-- Supports WMI and remote registry calls -->
-  <SupportsLegacy>1</SupportsLegacy>
-  <!-- Supports PS remote session -->
-  <SupportsSession>1</SupportsSession>
-  <!-- Specify file names to prestaged into the PSSession prior to collection -->
-  <!-- Global functions are stored in 'Core\Functions' -->
-  <GlobalFunctions>
-    <!-- Do you need global functions, works only on PS remote sessions -->
-    <Enabled>1</Enabled>
-    <File>New-CustomObject.ps1</File>
-  </GlobalFunctions>
-  <RunOrder>
+    <PackageName>LegacyAudit</PackageName>
+    <Description>Performs a basic audit of Windows 2000 and up using WMI and remote registry calls. PSRemoting will take priorty over WMI if available to reduce collection time.</Description>
+    <!-- Supports WMI and remote registry calls -->
+    <SupportsLegacy>1</SupportsLegacy>
+    <!-- Supports PS remote session -->
+    <SupportsSession>1</SupportsSession>
+    <GlobalFunctions>
+        <!-- Do you need global functions - if so place 1 for yes and 0 for no -->
+        <!-- This will take a local function from the .\Helpers folder and import it to the remote session -->
+        <!-- PSRemoteSessions Only! -->
+        <Enabled>1</Enabled>
+        <File>New-CustomObject.ps1</File>
+    </GlobalFunctions>
     <!-- these must mach the filenames (with no .ps1) and the run order is processed as per the list -->
     <!-- can disabled a script by commenting it out of the below list -->
-    <RunOrder>Get-BasicInfo</RunOrder>
-    <RunOrder>Get-Disks</RunOrder>
-    <RunOrder>Get-HPinfo</RunOrder>
-    <RunOrder>Get-MountPoints</RunOrder>
-    <RunOrder>Get-Networks</RunOrder>
-    <RunOrder>Get-PhysicalDisks</RunOrder>
-    <RunOrder>Get-Services</RunOrder>
-    <RunOrder>Get-Software</RunOrder>
-    <RunOrder>Get-Tasks</RunOrder>
-  </RunOrder>
+    <RunOrder>
+        <RunOrder>Get-BasicInfo</RunOrder>
+        <RunOrder>Get-Disks</RunOrder>
+        <RunOrder>Get-HPinfo</RunOrder>
+        <RunOrder>Get-MountPoints</RunOrder>
+        <RunOrder>Get-Networks</RunOrder>
+        <RunOrder>Get-PhysicalDisks</RunOrder>
+        <RunOrder>Get-Services</RunOrder>
+        <RunOrder>Get-Software</RunOrder>
+        <RunOrder>Get-Tasks</RunOrder>
+    </RunOrder>
 </Configuration>

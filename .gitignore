@@ -54,3 +54,6 @@ Helpers/Read-SQLQuery.ps1
 Helpers/Stop-LongRunningJobs.ps1
 Packages/002.StandardAudit/Set-WSUS.ps1
 *.log
+
+# Test output files not required to be kept
+Output/

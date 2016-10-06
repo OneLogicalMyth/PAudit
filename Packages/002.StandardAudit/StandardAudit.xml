@@ -1,0 +1,43 @@
+<Configuration>
+    <PackageName>StandardAudit</PackageName>
+    <Description>This uses PSSession to collect audit information</Description>
+    <!-- Supports WMI and remote registry calls -->
+    <SupportsLegacy>0</SupportsLegacy>
+    <!-- Supports PS remote session -->
+    <SupportsSession>1</SupportsSession>
+    <GlobalFunctions>
+        <!-- Do you need global functions - if so place 1 for yes and 0 for no -->
+        <!-- This will take a local function from the .\Helpers folder and import it to the remote session -->
+        <!-- PSRemoteSessions Only! -->
+        <Enabled>1</Enabled>
+        <File>New-CustomObject.ps1</File>
+    </GlobalFunctions>
+    <!-- these must mach the filenames (with no .ps1) and the run order is processed as per the list -->
+    <!-- can disabled a script by commenting it out of the below list -->
+    <RunOrder>
+        <RunOrder>Get-AntiVirus</RunOrder>
+        <RunOrder>Get-BasicInfo</RunOrder>
+        <RunOrder>Get-Certificates</RunOrder>
+        <RunOrder>Get-Disks</RunOrder>
+        <RunOrder>Get-EventLogStats</RunOrder>
+        <RunOrder>Get-Features</RunOrder>
+        <RunOrder>Get-LocalGroups</RunOrder>
+        <RunOrder>Get-LocalUsers</RunOrder>
+        <RunOrder>Get-LogicalDisks</RunOrder>
+        <RunOrder>Get-Logons</RunOrder>
+        <RunOrder>Get-MountPoints</RunOrder>
+        <RunOrder>Get-NetworkAdapters</RunOrder>
+        <RunOrder>Get-PagefileInfo</RunOrder>
+        <RunOrder>Get-Partitions</RunOrder>
+        <RunOrder>Get-PatchInformation</RunOrder>
+        <RunOrder>Get-PhysicalMemory</RunOrder>
+        <RunOrder>Get-Printers</RunOrder>
+        <RunOrder>Get-Processor</RunOrder>
+        <RunOrder>Get-SecurityProtocols</RunOrder>
+        <RunOrder>Get-Services</RunOrder>
+        <RunOrder>Get-Shares</RunOrder>
+        <RunOrder>Get-Software</RunOrder>
+        <RunOrder>Get-TimeSettings</RunOrder>
+        <RunOrder>Get-WSUS</RunOrder>
+    </RunOrder>
+</Configuration>

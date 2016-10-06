@@ -6,6 +6,11 @@
 -->
 <Messages>
     <Message>
+        <EventID>1</EventID>
+        <EntryType>Information</EntryType>
+        <Text>{{DATA}}</Text>
+    </Message>
+    <Message>
         <EventID>95</EventID>
         <EntryType>Information</EntryType>
         <Text>PAudit has set TrustedHosts to * for WinRM this means all remote computers are trusted.</Text>
