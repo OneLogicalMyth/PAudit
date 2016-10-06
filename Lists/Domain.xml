@@ -6,9 +6,11 @@
   <!-- DomainName param must be a DNS hostname (FQDN) -->
   <!-- Username and Password must be encrypted using the encrypt password tool provided -->
   <Domain>
-    <DomainName>domain.local</DomainName>
-    <Username>DOMAIN\Username</Username>
-    <Password>MUST BE ENCRYPTED</Password>
+    <DomainName>ad.example.com</DomainName>
+    <!-- must be an IP of a usable DNS server for the domain, required for remote domains to work -->
+    <DNSServer>172.24.1.232</DNSServer>
+    <Username>EXAMPLE\a-scottj</Username>
+    <Password>01000000d08c9ddf0115d1118c7a00c04fc297eb010000008eacb4c42fed4849b62e4317c81fac78000000000200000000001066000000010000200000002133a81847f1e51685d325b3be0517d3b9f15506b06fc44370763c08c0986110000000000e8000000002000020000000d2786ab6a10e01dfc21d4766e6082ed94678fec0f392af41dc3bc9db34ae440d30000000ee6fa551b70489cff8bae311906b50f261ec7b5e418c2d4656d0634f11c20e22692244eda27bc5f34a29056026c9af1e4000000001e7c49f403ed4fde5c6562dde9e0cbc8e33d69b2bd59761651818b3ac17f7d744a4efd76dc89df56baa8561ffc019f76e90843ab9479cf8c09d84c93d6ec494</Password>
     <!-- PS Remote session settings, by default SSL is off for PowerShell -->
     <UseSSL>0</UseSSL>
   </Domain>

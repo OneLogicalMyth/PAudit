@@ -8,7 +8,7 @@
     <Message>
         <EventID>95</EventID>
         <EntryType>Information</EntryType>
-        <Text>PAudit as set TrustedHosts to * for WinRM this means all remote computers are trusted.</Text>
+        <Text>PAudit has set TrustedHosts to * for WinRM this means all remote computers are trusted.</Text>
     </Message>
     <Message>
         <EventID>100</EventID>
@@ -64,5 +64,10 @@
         <EventID>515</EventID>
         <EntryType>Error</EntryType>
         <Text>No PS remote sessions available, this package requires a .</Text>
+    </Message>
+    <Message>
+        <EventID>9999</EventID>
+        <EntryType>Error</EntryType>
+        <Text>{{DATA}}</Text>
     </Message>
 </Messages>

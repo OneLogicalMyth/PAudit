@@ -4,7 +4,9 @@
   <!-- HostName param can be either a DNS hostname (FQDN), shortname (NetBIOS) or IP address -->
   <!-- Username and Password must be encrypted using the encrypt password tool provided -->
   <Computer>
+    <!-- both hostname and IP are required, IP is used in case computer is not in DNS -->
     <HostName>domain.local</HostName>
+    <IP>1.1.1.1</IP>
     <Username>DOMAIN\Username</Username>
     <Password>MUST BE ENCRYPTED</Password>
     <!-- PS Remote session settings, by default SSL is off for PowerShell -->

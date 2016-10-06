@@ -53,3 +53,4 @@ Helpers/New-SQLTableScript.ps1
 Helpers/Read-SQLQuery.ps1
 Helpers/Stop-LongRunningJobs.ps1
 Packages/002.StandardAudit/Set-WSUS.ps1
+*.log
