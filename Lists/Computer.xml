@@ -5,11 +5,12 @@
   <!-- Username and Password must be encrypted using the encrypt password tool provided -->
   <Computer>
     <!-- both hostname and IP are required, IP is used in case computer is not in DNS -->
-    <HostName>domain.local</HostName>
-    <IP>1.1.1.1</IP>
-    <Username>DOMAIN\Username</Username>
-    <Password>MUST BE ENCRYPTED</Password>
+    <HostName>localhost</HostName>
+    <IP>127.0.0.1</IP>
+    <!-- remove the host name to use credentials that the script is run with -->
+    <Username></Username>
+    <Password>MUST BE ENCRYPTED; USE SECURE STRING</Password>
     <!-- PS Remote session settings, by default SSL is off for PowerShell -->
     <UseSSL>0</UseSSL>
   </Computer>
-</Domains>
+</Computers>
